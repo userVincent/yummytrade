@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>yummytrade - login</title>
+    <link rel="stylesheet" href="css/login.css" />
+</head>
+<body>
+<script type="module" src="js/firebase-setup.js"></script>
+<script type="module" src="js/auth.js">
+
+</script>
+
+<header>
+    <div id="headerdiv" class="header-menu">
+        <a href="/home.html">
+            <div class="header-title">
+                <img src="/images/yummytrade_logo.png" alt="Yummytrade Logo" class="header-logo" />
+            </div>
+        </a>
+        <div class="header-name" id="namediv"></div>
+        <span id="btnLogout" class="header-icon">
+            <img src="/images/logout.svg" height="24" />
+        </span>
+    </div>
+</header>
+
+
+<div id="logindiv" class="login">
+
+    <div class="textfield">
+        <label for="email">Email</label>
+        <input class="email" type="text" id="email" required="required"/>
+    </div>
+    <div class="textfield">
+        <label for="password">Password</label>
+        <input class="password" type="password" id="password" required="required"/>
+    </div>
+    <div class="login-button" id="btnSignUp">Sign up</div>
+    <div class="login-button" id="btnSignIn">Sign In</div>
+</div>
+<div class="page" id="contentdiv"></div>
+
+</body>
+</html>

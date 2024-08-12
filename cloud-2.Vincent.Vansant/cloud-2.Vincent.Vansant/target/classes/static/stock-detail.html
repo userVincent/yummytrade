@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>yummytrade - stock detail</title>
+    <link rel="stylesheet" href="css/stock-detail.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="module" src="js/firebase-setup.js"></script>
+    <script type="module" src="js/stock-detail.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1.5.1/dist/sockjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/stompjs@2.3.3/lib/stomp.min.js"></script>
+</head>
+<body>
+<header>
+    <div id="headerdiv" class="header-menu">
+        <a href="/home.html">
+            <div class="header-title">
+                <img src="/images/yummytrade_logo.png" alt="Yummytrade Logo" class="header-logo" />
+            </div>
+        </a>
+        <div class="header-name" id="namediv"></div>
+        <span id="btnLogout" class="header-icon">
+                <img src="/images/logout.svg" height="24" />
+            </span>
+    </div>
+</header>
+<div class="page">
+    <div class="content">
+        <div id="chartContainer" style="height: 800px; width: 100%;"></div>
+        <div class="trade-container">
+            <h3 id="tradeTitle">Buy/Sell Stock</h3>
+            <form id="tradeForm">
+                <input type="text" id="stockSymbol" name="symbol" placeholder="Stock Symbol" required />
+                <input type="number" id="quantity" name="quantity" placeholder="Quantity" required />
+                <input type="number" id="strikePrice" name="price" placeholder="Limit Price" step="0.01" />
+                <button type="button" id="buyButton">Buy</button>
+                <button type="button" id="sellButton">Sell</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

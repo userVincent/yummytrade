@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>yummytrade - index fund detail</title>
+    <link rel="stylesheet" href="css/index-detail.css" />
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+<script type="module" src="js/firebase-setup.js"></script>
+<script type="module" src="js/index-detail.js"></script>
+<header>
+    <div id="headerdiv" class="header-menu">
+        <a href="/home.html">
+            <div class="header-title">
+                <img src="/images/yummytrade_logo.png" alt="Yummytrade Logo" class="header-logo" />
+            </div>
+        </a>
+        <div class="header-name" id="namediv"></div>
+        <span id="btnLogout" class="header-icon">
+            <img src="/images/logout.svg" height="24" />
+        </span>
+    </div>
+</header>
+<div class="page">
+    <div class="left-column">
+        <h2 id="fundTitle">Index Fund Detail</h2>
+        <div id="fundInfo">
+            <p><strong>Name:</strong> <span id="fundName"></span></p>
+            <p><strong>Current Price:</strong> $<span id="currentPrice"></span></p>
+            <p><strong>Percentage Price Change:</strong> <span id="percentagePriceChange"></span>%</p>
+            <p><strong>Component Stocks:</strong></p>
+            <div id="componentStocksDetails"></div>
+        </div>
+    </div>
+    <div class="right-column">
+        <div class="chart-container">
+            <div id="fundChart" style="width: 100%; height: 600px;"></div>
+        </div>
+
+        <div class="container">
+            <form id="tradeForm">
+                <input type="text" id="fundSymbol" name="symbol" placeholder="Fund Symbol" required />
+                <input type="number" id="quantity" name="quantity" placeholder="Quantity" required />
+                <button type="button" id="buyButton">Buy</button>
+                <button type="button" id="sellButton">Sell</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,158 @@
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    background-color: #F3F4F6;
+    color: #333333;
+}
+
+a {
+    color: #112A6B;
+    text-decoration: none;
+}
+
+.header-menu {
+    background: #112A6B;
+    display: flex;
+    height: 64px;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header-logo {
+    height: 48px;
+}
+
+.header-title {
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 56px;
+    padding-left: 16px;
+}
+
+.header-icon {
+    cursor: pointer;
+    line-height: 72px;
+}
+
+.header-icon > img {
+    margin-right: 16px;
+}
+
+.header-name {
+    color: #ffffff;
+    font-size: 12px;
+    height: 16px;
+    line-height: 72px;
+    text-align: right;
+    top: 12px;
+}
+
+.page {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.column {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.stock-column {
+    width: 35%;
+    margin-right: 2%;
+}
+
+.orders-column {
+    width: 63%;
+}
+
+h2 {
+    color: #112A6B;
+}
+
+.stock-list, .orders-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.stock-row, .order-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #E5E7EB;
+    transition: background-color 0.2s;
+}
+
+.stock-row {
+    cursor: pointer;
+}
+
+.stock-row:hover, .order-row:hover {
+    background-color: #E5E7EB;
+}
+
+.stock-symbol, .stock-name, .stock-price, .stock-change, .order-symbol, .order-quantity, .order-price, .order-status, .order-type, .order-date {
+    flex: 1;
+    text-align: left;
+}
+
+.stock-price, .stock-change, .order-quantity, .order-price, .order-status, .order-type, .order-date {
+    text-align: right;
+}
+
+.stock-change.positive, .order-status.FILLED, .order-type.BUY {
+    color: #228B22; /* Forest Green */
+}
+
+.stock-change.negative, .order-status.KILLED, .order-type.SELL {
+    color: #B22222; /* Firebrick */
+}
+
+.order-status.PENDING {
+    color: #FFA500; /* Orange */
+}
+
+.order-row {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr 1fr 1.5fr 1fr 1fr 2fr;
+    align-items: center;
+}
+
+.manager-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.manager-button:hover {
+    background-color: #1E7A1E;
+}
+
+.cancel-button {
+    background-color: #B22222;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    visibility: hidden;
+}
+
+.cancel-button:hover {
+    background-color: #8B0000;
+}

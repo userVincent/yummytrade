@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>yummytrade - home</title>
+    <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+<script type="module" src="js/firebase-setup.js"></script>
+<script type="module" src="js/home.js"></script>
+<header>
+    <div id="headerdiv" class="header-menu">
+        <a href="/home.html">
+            <div class="header-title">
+                <img src="/images/yummytrade_logo.png" alt="Yummytrade Logo" class="header-logo" />
+            </div>
+        </a>
+        <div class="header-name" id="namediv"></div>
+        <span id="btnLogout" class="header-icon">
+            <img src="/images/logout.svg" height="24" />
+        </span>
+    </div>
+</header>
+<div class="page">
+    <div class="column stock-column">
+        <h2>NYSE</h2>
+        <div id="NYSEstocksList" class="stock-list"></div>
+        <h2>NASDAQ</h2>
+        <div id="NASDAQstocksList" class="stock-list"></div>
+        <h2>ETFs</h2>
+        <div id="indexFundsList" class="stock-list"></div>
+    </div>
+    <div id="ordersColumn" class="column orders-column">
+        <h2>Past Orders</h2>
+        <div id="ordersList" class="orders-list"></div>
+    </div>
+</div>
+</body>
+</html>

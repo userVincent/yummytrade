@@ -1,0 +1,123 @@
+body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+    background-color: #F3F4F6;
+    color: #333333;
+}
+
+a {
+    color: #112A6B;
+    text-decoration: none;
+}
+
+.header-menu {
+    background: #112A6B;
+    display: flex;
+    height: 64px;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header-logo {
+    height: 48px; /* Increase the size of the logo for better visibility */
+}
+
+.header-title {
+    color: #ffffff;
+    font-size: 32px;
+    line-height: 56px;
+    padding-left: 16px;
+}
+
+.header-icon {
+    cursor: pointer;
+    line-height: 72px;
+}
+
+.header-icon > img {
+    margin-right: 16px;
+}
+
+.header-name {
+    color: #ffffff;
+    font-size: 12px;
+    height: 16px;
+    line-height: 72px;
+    text-align: right;
+    top: 12px;
+}
+
+.page {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin-top: 80px; /* Adjust for fixed header */
+}
+
+.column {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.users-column {
+    width: 25%;
+    margin-right: 2%;
+}
+
+.orders-column {
+    width: 73%;
+}
+
+h2 {
+    color: #112A6B;
+}
+
+.users-list, .orders-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-row, .order-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.2s;
+}
+
+.user-row:hover, .order-row:hover {
+    background-color: #f1f1f1;
+}
+
+.user-email, .user-role, .order-symbol, .order-quantity, .order-price, .order-status, .order-type, .order-email, .order-date {
+    flex: 1;
+    text-align: left;
+}
+
+.user-role, .order-quantity, .order-price, .order-status, .order-type, .order-email, .order-date {
+    text-align: right;
+}
+
+.order-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1.5fr 1fr 1fr 1.5fr 2fr; /* Adjust the number of columns and their widths as needed */
+    align-items: center;
+}
+
+.order-status.FILLED, .order-type.BUY {
+    color: green;
+}
+
+.order-status.KILLED, .order-type.SELL {
+    color: red;
+}
+
+.order-status.PENDING {
+    color: orange;
+}
