@@ -23,6 +23,8 @@ Yummytrade Broker is a financial broker application developed using Java Spring 
   - Supports a two-phase commit protocol for buy/sell orders between the exchange and the broker.
   - Orders go through four states: INITIATED, PENDING, FILLED, KILLED.
   - Implements callback URLs for limit orders to notify the broker of state transitions.
+ 
+<img src="https://github.com/user-attachments/assets/5fe26870-45e4-4155-befd-cb592a48a7e4" width=40% height=40%>
 
 - **ETFs (Exchange-Traded Funds)**:
   - Offers composite products combining stocks from one or multiple exchanges.
@@ -46,4 +48,7 @@ Yummytrade Broker is a financial broker application developed using Java Spring 
 
 ## Demo Video
 
-For a quick demonstration of the Yummytrade Broker application in action, please check out the [Demo Video](insert-link-here).
+For a quick demonstration of the Yummytrade Broker application in action, please check out the [Demo Video](https://github.com/user-attachments/assets/d8a38a16-4ba8-4d18-90d5-e2fb603e9592).
+
+
+
